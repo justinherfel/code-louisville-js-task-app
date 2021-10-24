@@ -1,14 +1,38 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>The Best CRUD Task List</title>
+        <title>TASKS
+        </title>
         <link rel="stylesheet" type="text/css" href="css/styles.css">
 
     </head>
     <body>
         <div class="title">
             <h1>Oh CRUD!</h1>
-            <p>Things I Remembered to Do:</p>
+            <p>The Super Duper Simple Task List Maker:</p>
         </div>
+        <div class="form">
+            <form action="javascript:void(0);" method="POST" onsubmit="app.Add()">
+                <input type="text" id="add-todo" placeholder="Thing To-Do">
+                <input type="submit" value="Add" class="button-1">
+            </form>
+            <p>You Have:</p>
+            <p id="counter"></p>
+            <table>
+                <tr class="to-do">
+                    <th><h3>To-Do:</h3></th>
+                </tr>
+                <tbody id="tasks">
+                </tbody>
+            </table>
+        </div>
+
+        <div id="edit-box" role="aria-hidden">
+            <form action="javascript:void(0);" method="POST" id="save-edit">
+                <input type="text" id="edit-to-do">
+                <input type="submit" value="Save" class="button-success">
+            </form>
+        </div>
+        <script src="js/scripts.js"></script>
     </body>
 </html>
