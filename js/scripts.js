@@ -1,48 +1,103 @@
+
 var app = new function() {
     this.el = document.getElementById('tasks');
-    globalThis.tasks = []
 
-    // Create
+    this.tasks = []
+
+
+    // This displays all of the to-do list items (read)
     this.FetchAll = function() {
-
-    };
-
-    // Read
-    this.Add = function() {
-
-    };
-
-    // Update
-    this.Edit = function(item) {
         var data = '';
 
-        if (globalThis.tasks.length > 0) {
-            for (i=0; i < this.tasks.length; i++) {
-                data += '<tr>';
-                data += '<td>' + (i + 1) + '. ' + this.task[i] + '</td>';
-                data += '<td><button onclick="app.Edit('+i+')" class = "btn btn-warning">Edit</td>';
-                data += '<td><button onclick="app.Delete('+i+')" class = "btn btn-danger">Delete</td>';
-                data += '</tr>'
+        if (this.tasks.length > 0) {
+          for (i = 0; i < this.tasks.length; i++) {
+            data += '<tr>';
+            data += '<td>' + (i + 1) + ". " + this.tasks[i] + '</td>';
+            data += '<td><button onclick="app.Edit(' + i + ')" class="btn btn-warning">Edit</button></td>';
+            data += '<td><button onclick="app.Delete(' + i + ')" class="btn btn-danger">Delete</button></td>';
+            data += '</tr>';
+          }
+        }
+
+        this.Count(this.tasks.length);
+        return this.el.innerHTML = data;
+    };
+
+    // This is the create function (create)
+    this.Add = function() {
+        el = document.getElementById('add-todo');
+        // This gets the value
+        var task = el.value;
+
+        if (task) {
+            // This adds the new value
+            this.tasks.push(task.trim());
+            // This resets the input value
+            el.value = '';
+            // This displays the new list
+            this.FetchAll();
+        }
+    };
+    
+    // This will edit the existing items (update)
+    this.Edit = function (item) {
+        var el = document.getElementById('edit-todo');
+        // This displays the value in the field
+        el.value = this.tasks[item];
+        // Display the fields
+        document.getElementById('edit-box').style.display = 'block';
+        self = this;
+
+        document.getElementById('save-edit').onsubmit = function() {
+            // Gets the value
+            var task = el.value;
+
+            if (task) {
+                // Edits the value
+                self.tasks.splice(item, 1, task.trim());
+                // Displays the new list
+                self.FetchAll();
+                // Hide the fields
+                CloseInput();
             }
         }
-        this.Count(this.tasks.length);
-        return this.el.innerHTML = data
     };
 
-    // Delete
 
-    this.Delete = function(item) {
+    // This is the delete function (delete)
 
+    this.Delete = function (item) {
+        // Deletes the current row
+        this.tasks.splice(item, 1);
+        // Displays the new list
+        this.FetchAll();
     };
 
-    this.Count = function(data) {
+    // This displays the amount of items on the list and keeps track of the count
+    this.Count = function (data) {
+        var el = document.getElementById('counter');
+        var name = 'Tasks';
 
+        if (data) {
+            if (data == 1) {
+                name = 'Task'
+            }
+          el.innerHTML = data + ' ' + name;
+        }
+        else {
+          el.innerHTML = 'No ' + name;
+        }
     };
+
 }
 
 // Continually updating the to-do list
 app.FetchAll();
 
-function closeInput() {
+function CloseInput() {
+    document.getElementById('edit-box').style.display = 'none';
+}
+
+function CloseInput() {
     document.getElementById('edit-box').style.display = 'none';
 }
