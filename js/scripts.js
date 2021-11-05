@@ -9,6 +9,9 @@ var app = new function() {
     this.FetchAll = function() {
         var data = '';
 
+        // After user inputs task, this is the function that calls the table row and table cell, edit and delete buttons
+        // This is one row of information that follows the html format
+        // This if statement is what happens when text is added and button is clicked to submit
         if (this.tasks.length > 0) {
           for (i = 0; i < this.tasks.length; i++) {
             data += '<tr>';
@@ -53,7 +56,7 @@ var app = new function() {
             var task = el.value;
 
             if (task) {
-                // Edits the value
+                // Edits the value. What does the '1' refer to?
                 self.tasks.splice(item, 1, task.trim());
                 // Displays the new list
                 self.FetchAll();
@@ -67,7 +70,8 @@ var app = new function() {
     // This is the delete function (delete)
 
     this.Delete = function (item) {
-        // Deletes the current row
+        // Deletes the current row. What does the '1' refer to? Is it the same as above?
+        // Splice function adds something or deletes a new item into the array?
         this.tasks.splice(item, 1);
         // Displays the new list
         this.FetchAll();
@@ -78,12 +82,16 @@ var app = new function() {
         var el = document.getElementById('counter');
         var name = 'Tasks';
 
+        // This if else statement works out the correct grammar of the word 'task'
         if (data) {
+            // When there is only 1 task
             if (data == 1) {
                 name = 'Task'
             }
+            // When task number is > 1
           el.innerHTML = data + ' ' + name;
         }
+        // When there are 0 tasks
         else {
           el.innerHTML = 'No ' + name;
         }
@@ -94,6 +102,8 @@ var app = new function() {
 // Continually updating the to-do list
 app.FetchAll();
 
+
+// Is this a function constructor, with the capital letter?
 function CloseInput() {
     document.getElementById('edit-box').style.display = 'none';
 }
