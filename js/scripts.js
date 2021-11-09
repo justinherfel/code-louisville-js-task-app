@@ -25,7 +25,6 @@ var app = new function() {
         this.Count(this.tasks.length);
         return this.el.innerHTML = data;
     };
-
     // This is the create function (create)
     this.Add = function() {
         el = document.getElementById('add-todo');
@@ -40,6 +39,7 @@ var app = new function() {
             // This displays the new list
             this.FetchAll();
         }
+        
     };
     
     // This will edit the existing items (update)
