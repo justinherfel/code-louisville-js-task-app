@@ -5,6 +5,7 @@ var app = new function() {
     this.tasks = []
 
 
+
     // This displays all of the to-do list items (read)
     this.FetchAll = function() {
         var data = '';
@@ -20,6 +21,7 @@ var app = new function() {
             data += '<td><button onclick="app.Delete(' + i + ')" class="btn btn-danger">Delete Item</button></td>';
             data += '</tr>';
           }
+
         }
 
         this.Count(this.tasks.length);
