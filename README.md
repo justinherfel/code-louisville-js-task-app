@@ -1,1 +1,1 @@
-This is a simple task list app, where you can make lists based on four criteria. First is urgent tasks, next is important tasks, next is fun tasks and last is acknowledgement list. The first three lists are meant for the user to create and design the day, and the last list is meant to reflect on what you did, either the day before, or at the end of the same day, and celebrate your accomplishments.
+This is a simple task app where you can add, edit, or delete individual items into a very simple task list. It is a simply run app using strings in JavaScript.
