@@ -1,43 +1,48 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TASKS</title>
     <link rel="stylesheet" type="text/css" href="css/styles.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 </head>
 <body>
+    
 
     <div class="title">
-            <h1>Get On Track!</h1>
-            <p>The Best Task List Maker:</p>
-        </div>
-        
+        <h1>Get On Track!</h1>
+        <p>Everyday Task List Maker:</p>
+    </div>
+    
 <div class="form">
-    <form action="javascript:void(0);" method="POST" onsubmit="app.Add()">
-    <input type="text" id="add-todo" placeholder="Type Task Here">
-    <input type="submit" value="Add" class="btn btn-primary">
-    </form>
-    <p>Total Tasks:</p>
-    <p id="counter"></p>
+<form action="javascript:void(0);" method="POST" onsubmit="app.Add()">
+<input type="text" id="add-todo" placeholder="Type Task Here"><br><br>
+<input type="submit" value="Click to Add Item" class="btn btn-success active">
+</form><br>
+<p><strong>Total Number of Tasks:</strong></p>
+<p id="counter"></p>
 
-    <table>
-    <tr class="to-do">
-        <th><h3>Today's List:</h3></th>
-    </tr>
-        <tbody id="tasks">
-        </tbody>
-    </table>
+<table>
+<tr class="to-do">
+    <th><h3>Today's List:</h3></th>
+</tr>
+    <tbody id="tasks">
+    </tbody>
+</table>
 </div>
 
 <div id="edit-box" role="aria-hidden">
-    <form action="javascript:void(0);" method="POST" id="save-edit">
-        <input type="text" id="edit-todo">
-        <input type="submit" value="Save" class="button-success">
-        <a onclick="CloseInput()" aria-label="Close">&#10006;</a>
-    </form>
+<form action="javascript:void(0);" method="POST" id="save-edit">
+    <input type="text" id="edit-list">
+    <input type="submit" value="Click to Save Edits" class="button-success">
+    <!-- The aria-label attribute is used to define a string that labels the current element. It is used for accessibility. -->
+    <a onclick="CloseInput()" aria-label="Close">&#10006;</a>
+</form>
 </div>
 
 <script src="js/scripts.js"></script>
+
 </body>
 </html>
