@@ -72,8 +72,7 @@ var app = new function() {
     // This is the delete function (delete)
 
     this.Delete = function (item) {
-        // Deletes the current row. What does the '1' refer to? Is it the same as above?
-        // Splice function adds something or deletes a new item into the array?
+        // Deletes the current row. The 1 refers to the number of items to be deleted.
         this.tasks.splice(item, 1);
         // Displays the new list
         this.FetchAll();
