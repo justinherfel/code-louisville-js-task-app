@@ -4,8 +4,6 @@ var app = new function() {
 
     this.tasks = []
 
-
-
     // This displays all of the to-do list items (read)
     this.FetchAll = function() {
         var data = '';
@@ -68,7 +66,6 @@ var app = new function() {
         }
     };
 
-
     // This is the delete function (delete)
 
     this.Delete = function (item) {
@@ -104,11 +101,8 @@ var app = new function() {
 app.FetchAll();
 
 
-// Is this a function constructor, with the capital letter?
+// 
 function CloseInput() {
     document.getElementById('edit-box').style.display = 'none';
 }
 
-function CloseInput() {
-    document.getElementById('edit-box').style.display = 'none';
-}
