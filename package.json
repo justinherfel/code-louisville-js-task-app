@@ -1,0 +1,19 @@
+{
+  "name": "code-louisville-js-task-app",
+  "version": "1.0.0",
+  "description": "This is a simple task app where you can add, edit, or delete individual items into a very simple task list. It is a simply run app using strings in JavaScript.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/justinherfel/code-louisville-js-task-app.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/justinherfel/code-louisville-js-task-app/issues"
+  },
+  "homepage": "https://github.com/justinherfel/code-louisville-js-task-app#readme"
+}

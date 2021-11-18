@@ -32,3 +32,39 @@ td {
 .to-do {
     background: transparent !important;
 }
+
+/* For large screens, the nav bar goes to the top row of the page, pushing the nav buttons on the right JCPhoto on the left,
+   using space-between command */
+   @media (min-width: 900px) {
+
+    /* .add-item-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;    
+        /* grid-template-columns: 1fr 1fr; */
+        /* grid-gap: 0px 20px; */
+    /* } */
+
+    /* .todays-list-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: center; */
+        /* grid-gap: 0px 20px; */
+    /* } */
+/* 
+    .temp-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: center; */
+        /* grid-gap: 0px 20px; */
+    /* } */ */
+
+    .style{
+        display: grid;
+        grid-template-columns: auto auto auto;
+        /* flex-direction: row;
+        justify-content: center; */
+    }
+
+}
+

@@ -1,24 +1,24 @@
 
-var app = new function() {
+var app = new function () {
     this.elem = document.getElementById('tasks');
 
     this.tasks = []
 
     // This displays all of the to-do list items (read)
-    this.FetchAll = function() {
+    this.FetchAll = function () {
         var data = '';
 
         // After user inputs task, this is the function that calls the table row and table cell, edit and delete buttons
         // This is one row of information that follows the html format
         // This if statement is what happens when text is added and button is clicked to submit
         if (this.tasks.length > 0) {
-          for (i = 0; i < this.tasks.length; i++) {
-            data += '<tr>';
-            data += '<td>' + (i + 1) + ". " + this.tasks[i] + '</td>';
-            data += '<td><button onclick="app.Edit(' + i + ')" class="btn btn-info">Edit Item</button></td>';
-            data += '<td><button onclick="app.Delete(' + i + ')" class="btn btn-danger">Delete Item</button></td>';
-            data += '</tr>';
-          }
+            for (i = 0; i < this.tasks.length; i++) {
+                data += '<tr>';
+                data += '<td>' + (i + 1) + ". " + this.tasks[i] + '</td>';
+                data += '<td><button onclick="app.Edit(' + i + ')" class="btn btn-info">Edit Item</button></td>';
+                data += '<td><button onclick="app.Delete(' + i + ')" class="btn btn-danger">Delete Item</button></td>';
+                data += '</tr>';
+            }
 
         }
 
@@ -26,7 +26,7 @@ var app = new function() {
         return this.elem.innerHTML = data;
     };
     // This is the create function (create)
-    this.Add = function() {
+    this.Add = function () {
         elem = document.getElementById('add-todo');
         // This gets the value
         var task = elem.value;
@@ -39,9 +39,9 @@ var app = new function() {
             // This displays the new list
             this.FetchAll();
         }
-        
+
     };
-    
+
     // This will edit the existing items (update)
     this.Edit = function (item) {
         var elem = document.getElementById('edit-list');
@@ -51,7 +51,7 @@ var app = new function() {
         document.getElementById('edit-box').style.display = 'block';
         self = this;
 
-        document.getElementById('save-edit').onsubmit = function() {
+        document.getElementById('save-edit').onsubmit = function () {
             // Gets the value
             var task = elem.value;
 
@@ -83,15 +83,15 @@ var app = new function() {
         // This if else statement works out the correct grammar of the word 'task'
         if (data) {
             // When there is only 1 task
-            if (data == 1) {
+            if (data === 1) {
                 name = 'Task'
             }
             // When task number is > 1
-          elem.innerHTML = data + ' ' + name;
+            elem.innerHTML = data + ' ' + name;
         }
         // When there are 0 tasks
         else {
-          elem.innerHTML = 'None';
+            elem.innerHTML = 'None';
         }
     };
 
