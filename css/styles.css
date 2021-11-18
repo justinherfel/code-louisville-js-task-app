@@ -4,19 +4,19 @@
     margin-top: 25px;
 }
 
-.style{
+.style {
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
-.temp-container{
+.temp-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
-.form{
+.form {
     margin: auto;
     max-width: 400px;
     text-align: center;
@@ -54,13 +54,13 @@ td {
 
 /* For large screens, the nav bar goes to the top row of the page, pushing the nav buttons on the right JCPhoto on the left,
    using space-between command */
-   @media (min-width: 900px) {
+   @media (min-width: 1000px) {
     .style{
         display: flex;
         flex-direction: column;
         float: left;
         justify-content: center;
-        margin-left: 3rem;
+        margin-left: 7rem;
     }
 
     .temp-container{
@@ -68,7 +68,7 @@ td {
         flex-direction: column;
         float: right;
         justify-content: center;
-        margin-right: 3rem;
+        margin-right: 5rem;
     }
     
 }
