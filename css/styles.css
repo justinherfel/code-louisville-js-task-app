@@ -2,12 +2,23 @@
 .title {
     text-align: center;
     margin-top: 25px;
-
 }
 
-.form {
+.style{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.temp-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.form{
     margin: auto;
-    max-width: 80%;
+    max-width: 400px;
     text-align: center;
 }
 
@@ -33,38 +44,32 @@ td {
     background: transparent !important;
 }
 
+.spacer {
+    height: 25px;
+    width: 100%;
+    background-color: green;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
 /* For large screens, the nav bar goes to the top row of the page, pushing the nav buttons on the right JCPhoto on the left,
    using space-between command */
    @media (min-width: 900px) {
-
-    /* .add-item-container {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;    
-        /* grid-template-columns: 1fr 1fr; */
-        /* grid-gap: 0px 20px; */
-    /* } */
-
-    /* .todays-list-container {
-        display: flex;
-        flex-direction: row;
-        justify-content: center; */
-        /* grid-gap: 0px 20px; */
-    /* } */
-/* 
-    .temp-container {
-        display: flex;
-        flex-direction: row;
-        justify-content: center; */
-        /* grid-gap: 0px 20px; */
-    /* } */ */
-
     .style{
-        display: grid;
-        grid-template-columns: auto auto auto;
-        /* flex-direction: row;
-        justify-content: center; */
+        display: flex;
+        flex-direction: column;
+        float: left;
+        justify-content: center;
+        margin-left: 3rem;
     }
 
+    .temp-container{
+        display: flex;
+        flex-direction: column;
+        float: right;
+        justify-content: center;
+        margin-right: 3rem;
+    }
+    
 }
 

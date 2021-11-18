@@ -10,7 +10,6 @@ var app = new function () {
 
         // After user inputs task, this is the function that calls the table row and table cell, edit and delete buttons
         // This is one row of information that follows the html format
-        // This if statement is what happens when text is added and button is clicked to submit
         if (this.tasks.length > 0) {
             for (i = 0; i < this.tasks.length; i++) {
                 data += '<tr>';
