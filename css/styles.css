@@ -4,7 +4,7 @@
     margin-top: 25px;
 }
 
-.style {
+/* .style {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -14,7 +14,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-}
+} */
 
 .form {
     margin: auto;
@@ -54,22 +54,40 @@ td {
 
 /* For large screens, the nav bar goes to the top row of the page, pushing the nav buttons on the right JCPhoto on the left,
    using space-between command */
-   @media (min-width: 1000px) {
-    .style{
+   @media (min-width: 900px) {
+    .style {
+        width: 350px;
         display: flex;
         flex-direction: column;
         float: left;
         justify-content: center;
-        margin-left: 7rem;
+        margin-left: 5rem;
     }
 
-    .temp-container{
+    .temp-container {
+        width: 350px;
+        display: flex;
+        flex-direction: column;
+        float: left;
+        justify-content: center;
+        margin-left: 5rem;
+    }
+
+    .chart-container {
         display: flex;
         flex-direction: column;
         float: right;
         justify-content: center;
-        margin-right: 5rem;
+        margin-right: 3rem;
+
     }
+
+    .spacer {
+        height: 25px;
+        width: 0%;
+        background-color: none;
+        margin-top: none;
+        margin-bottom: none;    }
     
 }
 
