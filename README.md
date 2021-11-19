@@ -1,5 +1,5 @@
 ##Overview
-This project contains one HTML file, one CSS file, and 3 separate JavaScript files. The HTML file contains three separate apps inside. Each of the three apps include a feature from the features list.
+This project contains one HTML file, one CSS file, and 3 separate JavaScript files. The HTML file contains three separate apps inside. Each of the three apps include a feature from the features list.##
 
 **Project Feature:
 Your application must have a responsive design through the use of media queries, Bootstrap, CSS Grid, Flexbox, and/or other similar approaches - we need to ensure that you can integrate your new JavaScript skills with your HTML/CSS skills you previously learned. We will test your site on at least two different screen sizes (mobile and desktop) and must see that you’ve incorporated some element of responsive design to it.**
