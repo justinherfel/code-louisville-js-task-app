@@ -54,35 +54,37 @@ td {
 
 .pie-chart-title {
     text-align: center;
+    margin: 0;
 }
 
 /* For large screens, the nav bar goes to the top row of the page, pushing the nav buttons on the right JCPhoto on the left,
    using space-between command */
-   @media (min-width: 900px) {
+
+   @media (min-width: 1100px) {
+    .main-grid {
+    display: grid;
+    grid-template-columns: 2fr 2fr 2fr;
+    }
+    
     .style {
+        grid-column-start: 1;
         width: 350px;
-        display: flex;
-        flex-direction: column;
-        float: left;
-        justify-content: center;
-        margin-left: 5rem;
+        display: grid;
     }
 
     .temp-container {
+        grid-column: 3;
+
         width: 350px;
-        display: flex;
-        flex-direction: column;
-        float: left;
-        justify-content: center;
-        margin-left: 5rem;
+        display: grid;
     }
 
     .chart-container {
-        display: flex;
-        flex-direction: column;
-        float: right;
+        grid-column: 5  ;
+        width: 600px;
+        display: grid;
         justify-content: center;
-        margin-right: 3rem;
+        margin: 0;
 
     }
 
